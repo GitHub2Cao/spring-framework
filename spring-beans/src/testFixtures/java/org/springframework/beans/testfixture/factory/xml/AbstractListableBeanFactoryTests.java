@@ -50,6 +50,7 @@ public abstract class AbstractListableBeanFactoryTests extends AbstractBeanFacto
 
 	protected final void assertCount(int count) {
 		String[] defnames = getListableBeanFactory().getBeanDefinitionNames();
+		System.out.println("+++++++ " + defnames);
 		assertThat(defnames.length == count).as("We should have " + count + " beans, not " + defnames.length).isTrue();
 	}
 
